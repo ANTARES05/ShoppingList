@@ -1,13 +1,9 @@
 package com.antares.shoppinglist.domain
 
-class GetShopItemUseCase {
+class GetShopItemUseCase(private val shopListRepository: ShopListRepository) {
 
     // Метод получает объект по id
     fun getShopItem(shopItemId: Int): ShopItem {
-        TODO()
+        return shopListRepository.getShopItem(shopItemId)
     }
 }
-
-// Добавление объекта
-// Удаление объекта
-// Редактирование объекта
